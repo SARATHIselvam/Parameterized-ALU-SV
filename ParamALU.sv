@@ -28,13 +28,13 @@ always_comb begin
 			temp = A+B;
 			result = temp[WIDTH-1:0];
 			C = temp[WIDTH];
-			V = ((A[WIDTH-1:0] == B[WIDTH-1:0])&& (result[WIDTH -1 :0]!= A[WIDTH -1 : 0]));
+			V = ((A[WIDTH-1] == B[WIDTH-1])&& (result[WIDTH -1]!= A[WIDTH -1]));
 		end
 		ALU_SUB: begin
 			temp = A-B;
 			result = temp[WIDTH-1:0];
 			C = temp[4];
-			V = ((A[WIDTH-1:0] == B[WIDTH-1:0])&& (result[WIDTH -1 :0]!= A[WIDTH -1 : 0]));
+			V = ((A[WIDTH-1] == B[WIDTH-1])&& (result[WIDTH -1]!= A[WIDTH -1]));
 		end
 		ALU_AND: begin
 			result = A&B;
